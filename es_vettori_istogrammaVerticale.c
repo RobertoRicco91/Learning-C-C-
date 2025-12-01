@@ -11,47 +11,38 @@
 
 /*dichiarazioni funzioni*/
 
-int istogrammaVerticale(int vettore[MAX]);
+// int istogrammaVerticale(int vettore[MAX]);
+void visualizzaIstogrammaVerticale(int v[], int);
 
 
 /*function main begins program execution*/
 int main(void)
 {
-    int vettore[MAX] = {5,3,6,2,4,1,3,2,4,3};
-    // int i;
+    int v[MAX] = {5,3,6,2,4,1,3,2,4,3};
 
-    // printf("Inserisci 10 numeri positivi, valore massimo %d:\n", MAX_VALUE);
-    // for (i = 0; i < MAX; i++)
-    // {
-    //     printf("Numero %d: ", i + 1);
-    //     scanf(" %d", &vettore[i]);
-    //     if (vettore[i]>MAX_VALUE)
-    //     {
-    //         printf("Valore non valido, inserire un numero positivo minore o uguale a %d\n", MAX_VALUE);
-    //         i--;
-    //     }
-    // }
-    istogrammaVerticale(vettore);
-
+    visualizzaIstogrammaVerticale(v, MAX_VALUE);
 
     return 0;/*indicate that program ended successfully*/
 }
 
 /*definizioni funzioni*/
-int istogrammaVerticale(int vettore[MAX])
-{
-    int i;
-    int j;
-    printf("Istogramma verticale:\n");
-    for (int i = 0; i < MAX; i++)
-    {
-        printf("%d |", vettore[i]);
-        for (int j = 0; j < vettore[i]; j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
+void visualizzaIstogrammaVerticale(int v[],int valMassimo){
 
-    return 0;
+  for(int riga=valMassimo;riga>=1;riga--){ //comincio dalla prima riga e scendo
+  	for (int colonna=0;colonna<MAX;colonna++){ //per ogni valore nel vettore
+  		if (riga<=v[colonna]){
+  			printf("*");
+		  }
+		else {
+			printf(" ");
+		}
+	  }
+	printf("\n");
+
+  }
+
+  for (int i=0;i<MAX;i++){
+  	printf("%d",v[i]);
+  }
+
 }
