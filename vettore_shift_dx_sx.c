@@ -66,4 +66,3 @@ void shift_sx(int v[], int n)
     }
     v[n - 1] = first;
 }
-
