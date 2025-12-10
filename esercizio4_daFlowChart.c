@@ -20,7 +20,6 @@ float leggereNumero(char numeroOrdine);
 int main(void)
 {
     float valore1, valore2;
-
     int valoriAmmissibili=1;
 
     do
@@ -28,16 +27,15 @@ int main(void)
         valore1=leggereNumero('1');
         valore2=leggereNumero('2');
 
-        if ( ( (valore1>0)&&(valore2>0) )||( (valore1<0) &&
-            (valore2<0) )||( (valore1==0) && (valore2<0) )|| ( (valore1<0)&&(valore2==0) ) )
+        if ( ( (valore1>0)&&(valore2>0) )||( (valore1<0) && (valore2<0) )||( (valore1==0) && (valore2<0) )|| ( (valore1<0)&&(valore2==0) ) )
         {
             if (valore1<valore2)
             {
-                printf("Radice di %f :%f2.3",valore2/valore1,sqrt((valore2/valore1)));
+                printf("Radice di %2.2f :%2.2f",valore2/valore1,sqrt((valore2/valore1)));
             }
             else
             {
-                printf("Radice di %f :%2.2f",valore1/valore2,sqrt((valore1/valore2)));
+                printf("Radice di %2.2f :%2.2f",valore1/valore2,sqrt((valore1/valore2)));
             }
             valoriAmmissibili=1;
         }
@@ -66,8 +64,8 @@ float leggereNumero(char numeroOrdine)
 
     printf("\n");
     printf("Inserisci il %c\xF8 numero:",numeroOrdine);  //\xF8 � il codice ascii di �
-     scanf("%d",&numeroDaLeggere);
-     printf("\n");
+    scanf("%d",&numeroDaLeggere);
+    printf("\n");
 
      return numeroDaLeggere;
 }
