@@ -99,46 +99,7 @@ void criptaFarfallino(char frase[])
             pos+=1;
         }
     }
-    fraseCriptata[pos] = '\0';
-    // char fraseCriptata[MAX_CRIPTO]; // La frase criptata può essere più lunga
-    // int lun = 0;
-    // int j = 0;
-    // char carattere;
-    // unsigned int pos;
-
-
-    // for (int i = 0; i <= strlen(frase)-1; i++)
-    // {
-    //     if (isalpha(frase[i])!=0)
-    //     {
-    //         carattere = tolower(frase[i]);
-    //         if (isVowel(carattere)==1)
-    //         {
-    //             fraseCriptata[pos] = carattere;
-    //             if (isupper(frase[i]))
-    //             {
-    //                 fraseCriptata[pos+1]='F';
-    //             }
-    //             else
-    //             {
-    //                 fraseCriptata[pos+1]='f';
-    //             }
-    //             fraseCriptata[pos+2]=carattere;
-    //             pos=pos+3;
-    //         }
-    //         else
-    //         {
-    //             fraseCriptata[pos] = frase[i];
-    //             pos+=1;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         fraseCriptata[pos] = frase[i];
-    //         pos+=1;
-    //     }
-    // }
-    // fraseCriptata[pos] = '\0'; // Termina la nuova stringa
+    fraseCriptata[pos] = '\0';  /*termina la frase*/
 
     printf("Frase in alfabeto farfallino: %s\n",fraseCriptata);
 }
