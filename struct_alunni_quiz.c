@@ -86,14 +86,14 @@ void inserisciDati()
         printf("Inserisci cognome alunno %d: ", i + 1);
         scanf("%s", alunni[i].cognome);
     }
-
+    //inserimento dati quiz
     printf("\n-Inserisci le risposte corrette del quiz-\n");
     for (i = 0; i < MAX_DOMANDE; i++)
     {
         printf("\nRisposta %d:\n", i + 1);
         scanf("%s", &quiz[i]);
     }
-
+    //inserimento risposte alunni
     printf("\nInserisci le risposte degli studenti:\n");
     for (i = 0; i < MAX_DOMANDE; i++)
     {
@@ -123,12 +123,12 @@ int menu()
 void printErrori()
 {
     int i,j;
-
+// azzeramento errori
     for (i = 0; i < MAX_ALUNNI; i++)
     {
         alunni[i].nErrori = 0;
     }
-
+// conteggio errori
     for (i = 0; i < MAX_ALUNNI; i++)
     {
         for (j = 0; j < MAX_DOMANDE; j++)
@@ -145,11 +145,12 @@ void printErrori()
 void risposteDate()
 {
     int i,j;
+// azzeramento errori
     for (i = 0; i < MAX_ALUNNI; i++)
     {
         alunni[i].nErrori = 0;
     }
-
+// stampa risposte
     for (i = 0; i < MAX_ALUNNI; i++)
     {
         printf("\nAlunno: %s %s.\nRisposte date:.\n", alunni[i].cognome, alunni[i].nome);
@@ -164,13 +165,13 @@ void searchAlunni()
 {
     char cognome[40];
     int i,j, trovato=0;
-
+// azzeramento errori
     for(i=0;i<MAX_ALUNNI;i++)
         alunni[i].nErrori=0; //azzeriamo gli errori
 
     printf("\nQuale alunno cerchi? digita il cognome:");
     scanf("%s", cognome);
-
+// ricerca alunno
     for (i=0; i<MAX_ALUNNI; i++){
         if(strcmp(alunni[i].cognome,cognome)==0) {
             printf("\n\n Nome: %s\n Risposte date: ", alunni[i].nome);
